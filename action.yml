@@ -1,6 +1,9 @@
 name: 'Public-CfnGuardRegistry'
 description: This action builds CloudFormation Guard Rules Registries and publishes them to a user-provided S3 bucket.
 author: 'davidhessler'
+branding:
+  icon: upload-cloud
+  color: blue
 inputs:
   MakeAggregateRule:
     description: 'Enable automatic aggregation rule'
