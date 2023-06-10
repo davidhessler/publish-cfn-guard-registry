@@ -1,5 +1,5 @@
 name: 'Public-CfnGuardRegistry'
-description: This action build a CloudFormation Guard Rules Registry and publishes them to a user-provided S3 bucket.
+description: This action builds CloudFormation Guard Rules Registries and publishes them to a user-provided S3 bucket.
 author: 'davidhessler'
 inputs:
   MakeAggregateRule:
