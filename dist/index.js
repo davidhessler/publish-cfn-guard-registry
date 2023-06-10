@@ -205,7 +205,7 @@ function castAsBoolean(value) {
 async function run() {
     try {
         // Get inputs from the action
-        core.debug('Entering Start');
+        core.notice('Entering Start');
         const makeAggregate = core.getInput('MakeAggregateRule');
         let makeAggregateCasted = false;
         // Folders
@@ -219,7 +219,7 @@ async function run() {
         const version = core.getInput('AggregateVersion');
         const description = core.getInput('AggregateDescription');
         const markAsLatest = core.getInput('MarkAsLatest');
-        core.debug(JSON.stringify({
+        core.notice(JSON.stringify({
             name,
             contact,
             ruleOwner,
@@ -241,21 +241,21 @@ async function run() {
         }
         else {
             makeAggregateCasted = makeAggregate === 'true' || makeAggregate === 'True';
-            core.debug('MakeAggregate is valid');
+            core.notice('MakeAggregate is valid');
         }
         if (!validator.isValidBucketName(rulesRegistryBucket)) {
             core.setFailed(`Action Failed, reason: invalid parameter RuleRegistryBucket ${rulesRegistryBucket}. RuleRegistryBucket parameters must be a valid s3 bucket.`);
             failed = true;
         }
         else {
-            core.debug('RuleRegistryBucket is valid');
+            core.notice('RuleRegistryBucket is valid');
         }
         if (!validator.isFolderValid(mappingsDirectory)) {
             core.setFailed(`Action Failed, reason: invalid parameter MappingsDirectory ${mappingsDirectory}. MappingsDirectory parameters must be a valid folder.`);
             failed = true;
         }
         else {
-            core.debug('MappingsDirectory is valid');
+            core.notice('MappingsDirectory is valid');
         }
         if (makeAggregateCasted) {
             if (!validator.isFolderValid(rulesDirectory)) {
@@ -263,44 +263,44 @@ async function run() {
                 failed = true;
             }
             else {
-                core.debug('RulesDirectory is valid');
+                core.notice('RulesDirectory is valid');
             }
             if (!validator.isValidEmail(ruleOwner)) {
                 core.setFailed(`Action Failed, reason: invalid parameter RuleOwner ${ruleOwner}. RuleOwner parameters must be valid email address`);
                 failed = true;
             }
             else {
-                core.debug('RuleOwner is valid');
+                core.notice('RuleOwner is valid');
             }
             if (!validator.isValidVersion(version)) {
                 core.setFailed(`Action Failed, reason: invalid parameter Version ${version}. Version must be in semver format.  For details see https://github.com/npm/node-semver.`);
                 failed = true;
             }
             else {
-                core.debug('Version is valid');
+                core.notice('Version is valid');
             }
             if (!validator.isValidGenericInput(description)) {
                 core.setFailed(`Action Failed, reason: invalid parameter Description ${description}. Descriptions can only contain alpha-numeral characters, spaces, and the following special characters: -.!@#$%^&*()`);
                 failed = true;
             }
             else {
-                core.debug('Description is valid');
+                core.notice('Description is valid');
             }
             if (!validator.isValidBoolean(markAsLatest)) {
                 core.setFailed(`Action Failed, reason: invalid parameter MarkAsLatest ${markAsLatest}. MarkAsLatest must be a valid boolean.`);
                 failed = true;
             }
             else {
-                core.debug('MarkAsLatest is valid');
+                core.notice('MarkAsLatest is valid');
             }
         }
         else {
-            core.debug('Do not aggregate');
+            core.notice('Do not aggregate');
         }
         // Persist defined rulesets
         const s3Client = new client_s3_1.S3Client({});
         if (!failed) {
-            core.debug('Starting to push existing rule sets');
+            core.notice('Starting to push existing rule sets');
             const ruleSets = rule_set_1.RuleSet.findRuleSets(mappingsDirectory);
             for (const ruleSet of ruleSets) {
                 try {
@@ -311,11 +311,11 @@ async function run() {
                     failed = true;
                 }
             }
-            core.debug('Finished pushing existing rule sets');
+            core.notice('Finished pushing existing rule sets');
         }
         if (!failed && makeAggregateCasted) {
             // Aggregate and persist rules into one ruleset
-            core.debug('Starting to aggregating rules');
+            core.notice('Starting to aggregating rules');
             const agg = new cfn_guard_aggregator_1.CfnGuardAggregator({
                 description,
                 version,
@@ -323,8 +323,8 @@ async function run() {
                 contact,
                 ruleOwner
             });
-            core.debug('Finished aggregating rules');
-            core.debug('Starting to push aggregate rule');
+            core.notice('Finished aggregating rules');
+            core.notice('Starting to push aggregate rule');
             const ruleSet = await agg.createAllRuleSet(rulesDirectory);
             try {
                 await ruleSet.publishToS3(rulesRegistryBucket, castAsBoolean(markAsLatest), s3Client);
@@ -332,7 +332,7 @@ async function run() {
             catch (error) {
                 core.setFailed(`Action Failed, reason: ${error}`);
             }
-            core.debug('Finished pushing aggregate rule');
+            core.notice('Finished pushing aggregate rule');
         }
         // Set outputs of the action
     }
@@ -388,7 +388,7 @@ class RuleSet {
         const ret = [];
         const files = (0, glob_1.globSync)(`${dir}/**/*.json`);
         for (const f of files) {
-            core.debug(`Aggregating file ${f}`);
+            core.notice(`Aggregating file ${f}`);
             const ruleSetJson = JSON.parse(fs_1.default.readFileSync(f, 'utf-8'));
             if (!!ruleSetJson.owner &&
                 !!ruleSetJson.ruleSetName &&
