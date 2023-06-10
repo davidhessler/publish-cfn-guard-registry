@@ -41,6 +41,6 @@ jobs:
           aws-region: ${{ env.AWS_REGION }}
       - uses: ./
         with:
-          MakeAggregateRule: false
+          MappingsDirectory: __tests__/mappings
           MarkAsLatest: false
           RuleRegistryBucket: cfn-guard-registry-819163596280
