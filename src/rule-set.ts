@@ -143,6 +143,7 @@ export class RuleSet {
       )
     }
     await Promise.all(promises)
+    core.setOutput('Published Files', promises.length / 2)
     core.notice(`Successfully pushed ${this.ruleSetName} to ${bucketName}`)
   }
 }

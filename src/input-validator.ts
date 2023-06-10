@@ -7,20 +7,30 @@ export class InputValidator {
   private readonly emailValidString: RegExp
   private readonly linuxValidString: RegExp
   constructor() {
-    this.genericValidString = new RegExp('(\\w|\\s|[-.!@#$%^&*()])+')
+    this.genericValidString = new RegExp('[\\w\\s\\-\\.!@#$%^&*()\\—]+')
     this.s3BucketValidString = new RegExp(
       '(?!(^xn--|.+-s3alias$|.+--ol-s3$))^[a-z0-9][a-z0-9-.]{1,61}[a-z0-9]$'
     )
-    this.emailValidString = new RegExp('^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$')
+    this.emailValidString = new RegExp('^[\\w\\-\\+\\.]+@[\\w\\-\\.]+\\w+$')
     this.linuxValidString = new RegExp('^\\/*.\\w+.(\\/[\\w-]+)*$')
   }
 
   isValidBucketName(input: string): boolean {
-    return this.s3BucketValidString.test(input)
+    const ret = this.s3BucketValidString.exec(input)
+    if (ret) {
+      return ret[0] === input
+    } else {
+      return false
+    }
   }
 
   isValidGenericInput(input: string): boolean {
-    return this.genericValidString.test(input)
+    const ret = this.genericValidString.exec(input)
+    if (ret) {
+      return ret[0] === input
+    } else {
+      return false
+    }
   }
 
   isValidVersion(input: string): boolean {
@@ -28,7 +38,12 @@ export class InputValidator {
   }
 
   isValidEmail(input: string): boolean {
-    return this.emailValidString.test(input)
+    const ret = this.emailValidString.exec(input)
+    if (ret) {
+      return ret[0] === input
+    } else {
+      return false
+    }
   }
 
   isValidBoolean(input: string): boolean {
@@ -44,6 +59,9 @@ export class InputValidator {
   }
 
   isFolderValid(input: string): boolean {
-    return this.linuxValidString.test(input) && fs.existsSync(input)
+    return (
+      input === '.' ||
+      (this.linuxValidString.test(input) && fs.existsSync(input))
+    )
   }
 }

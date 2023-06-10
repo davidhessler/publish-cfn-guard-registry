@@ -159,7 +159,7 @@ async function run(): Promise<void> {
       core.debug('Starting to push aggregate rule')
       const ruleSet = await agg.createAllRuleSet(rulesDirectory)
       try {
-        ruleSet.publishToS3(
+        await ruleSet.publishToS3(
           rulesRegistryBucket,
           castAsBoolean(markAsLatest),
           s3Client
