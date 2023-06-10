@@ -12,241 +12,246 @@ describe('RuleSet', () => {
       mappings: [
         {
           guardFilePath:
-            'test/rules/aws/aws_dms/dms_replication_not_public.guard',
+            '__tests__/rules/aws/aws_dms/dms_replication_not_public.guard',
           controls: ['AC.1.001', 'AC.1.002', 'SC.1.175'],
           reportsOn: ['dms']
         },
         {
           guardFilePath:
-            'test/rules/aws/amazon_ec2/ec2_instance_no_public_ip.guard',
+            '__tests__/rules/aws/amazon_ec2/ec2_instance_no_public_ip.guard',
           controls: ['AC.1.001', 'AC.1.002', 'AC.1.003'],
           reportsOn: ['ec2']
         },
         {
           guardFilePath:
-            'test/rules/aws/amazon_ec2/ec2_instance_profile_attached.guard',
+            '__tests__/rules/aws/amazon_ec2/ec2_instance_profile_attached.guard',
           controls: ['AC.1.001'],
           reportsOn: ['ec2']
         },
         {
           guardFilePath:
-            'test/rules/aws/opensearch_service/elasticsearch_in_vpc_only.guard',
+            '__tests__/rules/aws/opensearch_service/elasticsearch_in_vpc_only.guard',
           controls: ['AC.1.001', 'AC.1.002', 'SC.1.175'],
           reportsOn: ['opensearch']
         },
         {
-          guardFilePath: 'test/rules/aws/amazon_emr/emr_kerberos_enabled.guard',
+          guardFilePath:
+            '__tests__/rules/aws/amazon_emr/emr_kerberos_enabled.guard',
           controls: ['AC.1.001', 'AC.1.002', 'IA.1.076', 'IA.1.077'],
           reportsOn: ['emr']
         },
         {
           guardFilePath:
-            'test/rules/aws/amazon_emr/emr_master_no_public_ip.guard',
+            '__tests__/rules/aws/amazon_emr/emr_master_no_public_ip.guard',
           controls: ['AC.1.001', 'AC.1.002', 'AC.1.003'],
           reportsOn: ['emr']
         },
         {
-          guardFilePath: 'test/rules/aws/iam/iam_no_inline_policy_check.guard',
+          guardFilePath:
+            '__tests__/rules/aws/iam/iam_no_inline_policy_check.guard',
           controls: ['AC.1.001', 'AC.1.002'],
           reportsOn: ['iam']
         },
         {
           guardFilePath:
-            'test/rules/aws/iam/iam_policy_no_statements_with_admin_access.guard',
+            '__tests__/rules/aws/iam/iam_policy_no_statements_with_admin_access.guard',
           controls: ['AC.1.001', 'AC.1.002'],
           reportsOn: ['iam']
         },
         {
           guardFilePath:
-            'test/rules/aws/iam/iam_policy_no_statements_with_full_access.guard',
+            '__tests__/rules/aws/iam/iam_policy_no_statements_with_full_access.guard',
           controls: ['AC.1.001'],
           reportsOn: ['iam']
         },
         {
-          guardFilePath: 'test/rules/aws/iam/iam_user_no_policies_check.guard',
+          guardFilePath:
+            '__tests__/rules/aws/iam/iam_user_no_policies_check.guard',
           controls: ['AC.1.001', 'AC.1.002'],
           reportsOn: ['iam']
         },
         {
-          guardFilePath: 'test/rules/aws/amazon_ec2/restricted_ssh.guard',
+          guardFilePath: '__tests__/rules/aws/amazon_ec2/restricted_ssh.guard',
           controls: ['AC.1.001', 'AC.1.002', 'AC.1.003', 'SC.1.175'],
           reportsOn: ['ec2']
         },
         {
-          guardFilePath: 'test/rules/aws/amazon_ec2/ec2_instances_in_vpc.guard',
+          guardFilePath:
+            '__tests__/rules/aws/amazon_ec2/ec2_instances_in_vpc.guard',
           controls: ['AC.1.001', 'AC.1.002', 'SC.1.175'],
           reportsOn: ['ec2']
         },
         {
           guardFilePath:
-            'test/rules/aws/lambda/lambda_function_public_access_prohibited.guard',
+            '__tests__/rules/aws/lambda/lambda_function_public_access_prohibited.guard',
           controls: ['AC.1.001', 'AC.1.002', 'AC.1.003', 'SC.1.175'],
           reportsOn: ['lambda']
         },
         {
-          guardFilePath: 'test/rules/aws/lambda/lambda_inside_vpc.guard',
+          guardFilePath: '__tests__/rules/aws/lambda/lambda_inside_vpc.guard',
           controls: ['AC.1.001', 'AC.1.002', 'SC.1.175'],
           reportsOn: ['lambda']
         },
         {
           guardFilePath:
-            'test/rules/aws/amazon_rds/rds_instance_public_access_check.guard',
+            '__tests__/rules/aws/amazon_rds/rds_instance_public_access_check.guard',
           controls: ['AC.1.001', 'AC.1.002', 'AC.1.003', 'SC.1.175'],
           reportsOn: ['rds']
         },
         {
           guardFilePath:
-            'test/rules/aws/amazon_redshift/redshift_cluster_public_access_check.guard',
+            '__tests__/rules/aws/amazon_redshift/redshift_cluster_public_access_check.guard',
           controls: ['AC.1.001', 'AC.1.002', 'AC.1.003', 'SC.1.175'],
           reportsOn: ['redshift']
         },
         {
           guardFilePath:
-            'test/rules/aws/amazon_ec2/restricted_common_ports.guard',
+            '__tests__/rules/aws/amazon_ec2/restricted_common_ports.guard',
           controls: ['AC.1.001', 'AC.1.002', 'AC.1.003', 'SC.1.175'],
           reportsOn: ['ec2']
         },
         {
           guardFilePath:
-            'test/rules/aws/amazon_s3/s3_bucket_level_public_access_prohibited.guard',
+            '__tests__/rules/aws/amazon_s3/s3_bucket_level_public_access_prohibited.guard',
           controls: ['AC.1.001', 'AC.1.002', 'AC.1.003', 'SC.1.175'],
           reportsOn: ['s3']
         },
         {
           guardFilePath:
-            'test/rules/aws/amazon_s3/s3_bucket_policy_grantee_check.guard',
+            '__tests__/rules/aws/amazon_s3/s3_bucket_policy_grantee_check.guard',
           controls: ['AC.1.001', 'AC.1.002'],
           reportsOn: ['s3']
         },
         {
           guardFilePath:
-            'test/rules/aws/amazon_s3/s3_bucket_public_read_prohibited.guard',
+            '__tests__/rules/aws/amazon_s3/s3_bucket_public_read_prohibited.guard',
           controls: ['AC.1.001', 'AC.1.002', 'AC.1.003', 'SC.1.175'],
           reportsOn: ['s3']
         },
         {
           guardFilePath:
-            'test/rules/aws/amazon_s3/s3_bucket_public_write_prohibited.guard',
+            '__tests__/rules/aws/amazon_s3/s3_bucket_public_write_prohibited.guard',
           controls: ['AC.1.001', 'AC.1.002', 'AC.1.003', 'SC.1.175'],
           reportsOn: ['s3']
         },
         {
           guardFilePath:
-            'test/rules/aws/amazon_sagemaker/sagemaker_notebook_no_direct_internet_access.guard',
+            '__tests__/rules/aws/amazon_sagemaker/sagemaker_notebook_no_direct_internet_access.guard',
           controls: ['AC.1.001', 'AC.1.002', 'AC.1.003', 'SC.1.175'],
           reportsOn: ['sagemaker']
         },
         {
           guardFilePath:
-            'test/rules/aws/secrets_manager/secretsmanager_rotation_enabled_check.guard',
+            '__tests__/rules/aws/secrets_manager/secretsmanager_rotation_enabled_check.guard',
           controls: ['AC.1.001'],
           reportsOn: ['secretsmanager']
         },
         {
           guardFilePath:
-            'test/rules/aws/elastic_load_balancing_v2/alb_waf_enabled.guard',
+            '__tests__/rules/aws/elastic_load_balancing_v2/alb_waf_enabled.guard',
           controls: ['AC.1.003', 'SC.1.175'],
           reportsOn: ['elb']
         },
         {
           guardFilePath:
-            'test/rules/aws/amazon_ec2_auto_scaling/autoscaling_launch_config_public_ip_disabled.guard',
+            '__tests__/rules/aws/amazon_ec2_auto_scaling/autoscaling_launch_config_public_ip_disabled.guard',
           controls: ['AC.1.003'],
           reportsOn: ['autoscaling']
         },
         {
           guardFilePath:
-            'test/rules/aws/amazon_ec2/no_unrestricted_route_to_igw.guard',
+            '__tests__/rules/aws/amazon_ec2/no_unrestricted_route_to_igw.guard',
           controls: ['AC.1.003', 'SC.1.175'],
           reportsOn: ['ec2']
         },
         {
           guardFilePath:
-            'test/rules/aws/amazon_ec2/subnet_auto_assign_public_ip_disabled.guard',
+            '__tests__/rules/aws/amazon_ec2/subnet_auto_assign_public_ip_disabled.guard',
           controls: ['AC.1.003'],
           reportsOn: ['ec2']
         },
         {
           guardFilePath:
-            'test/rules/aws/api_gateway/api_gw_execution_logging_enabled.guard',
+            '__tests__/rules/aws/api_gateway/api_gw_execution_logging_enabled.guard',
           controls: ['IA.1.076'],
           reportsOn: ['apigateway']
         },
         {
           guardFilePath:
-            'test/rules/aws/cloudtrail/cloudtrail_s3_dataevents_enabled.guard',
+            '__tests__/rules/aws/cloudtrail/cloudtrail_s3_dataevents_enabled.guard',
           controls: ['IA.1.076'],
           reportsOn: ['cloudtrail']
         },
         {
           guardFilePath:
-            'test/rules/aws/cloudtrail/cloud_trail_cloud_watch_logs_enabled.guard',
+            '__tests__/rules/aws/cloudtrail/cloud_trail_cloud_watch_logs_enabled.guard',
           controls: ['IA.1.076'],
           reportsOn: ['cloudtrail']
         },
         {
           guardFilePath:
-            'test/rules/aws/elastic_load_balancing/elb_logging_enabled.guard',
+            '__tests__/rules/aws/elastic_load_balancing/elb_logging_enabled.guard',
           controls: ['IA.1.076'],
           reportsOn: ['elb']
         },
         {
-          guardFilePath: 'test/rules/aws/amazon_rds/rds_logging_enabled.guard',
+          guardFilePath:
+            '__tests__/rules/aws/amazon_rds/rds_logging_enabled.guard',
           controls: ['IA.1.076'],
           reportsOn: ['rds']
         },
         {
           guardFilePath:
-            'test/rules/aws/amazon_s3/s3_bucket_logging_enabled.guard',
+            '__tests__/rules/aws/amazon_s3/s3_bucket_logging_enabled.guard',
           controls: ['IA.1.076'],
           reportsOn: ['s3']
         },
         {
           guardFilePath:
-            'test/rules/aws/aws_waf_v2/wafv2_logging_enabled.guard',
+            '__tests__/rules/aws/aws_waf_v2/wafv2_logging_enabled.guard',
           controls: ['IA.1.076'],
           reportsOn: ['waf']
         },
         {
           guardFilePath:
-            'test/rules/aws/elastic_load_balancing_v2/alb_http_drop_invalid_header_enabled.guard',
+            '__tests__/rules/aws/elastic_load_balancing_v2/alb_http_drop_invalid_header_enabled.guard',
           controls: ['SC.1.175'],
           reportsOn: ['elb']
         },
         {
           guardFilePath:
-            'test/rules/aws/elastic_load_balancing_v2/alb_http_to_https_redirection_check.guard',
+            '__tests__/rules/aws/elastic_load_balancing_v2/alb_http_to_https_redirection_check.guard',
           controls: ['SC.1.175'],
           reportsOn: ['elb']
         },
         {
           guardFilePath:
-            'test/rules/aws/cloudwatch/cloudwatch_alarm_action_check.guard',
+            '__tests__/rules/aws/cloudwatch/cloudwatch_alarm_action_check.guard',
           controls: ['SC.1.175', 'SI.1.210'],
           reportsOn: ['cloudwatch']
         },
         {
           guardFilePath:
-            'test/rules/aws/opensearch_service/elasticsearch_node_to_node_encryption_check.guard',
+            '__tests__/rules/aws/opensearch_service/elasticsearch_node_to_node_encryption_check.guard',
           controls: ['SC.1.175'],
           reportsOn: ['opensearch']
         },
         {
           guardFilePath:
-            'test/rules/aws/elastic_load_balancing/elb_acm_certificate_required.guard',
+            '__tests__/rules/aws/elastic_load_balancing/elb_acm_certificate_required.guard',
           controls: ['SC.1.175'],
           reportsOn: ['elb']
         },
         {
           guardFilePath:
-            'test/rules/aws/elastic_load_balancing/elb_tls_https_listeners_only.guard',
+            '__tests__/rules/aws/elastic_load_balancing/elb_tls_https_listeners_only.guard',
           controls: ['SC.1.175'],
           reportsOn: ['elb']
         },
 
         {
           guardFilePath:
-            'test/rules/aws/amazon_s3/s3_bucket_ssl_requests_only.guard',
+            '__tests__/rules/aws/amazon_s3/s3_bucket_ssl_requests_only.guard',
           controls: ['SC.1.175'],
           reportsOn: ['s3']
         }
