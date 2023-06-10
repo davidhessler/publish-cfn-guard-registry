@@ -6,88 +6,88 @@
   "contact": "aws-guard-rules-registry@amazon.com",
   "mappings": [
     {
-      "guardFilePath": "test/rules/aws/api_gateway/api_gw_execution_logging_enabled.guard",
+      "guardFilePath": "__tests__/rules/aws/api_gateway/api_gw_execution_logging_enabled.guard",
       "controls": [
         "261",
         "1405"
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/elastic_load_balancing/elb_logging_enabled.guard",
+      "guardFilePath": "__tests__/rules/aws/elastic_load_balancing/elb_logging_enabled.guard",
       "controls": [
         "261",
         "1405"
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/aws_waf_v2/wafv2_logging_enabled.guard",
+      "guardFilePath": "__tests__/rules/aws/aws_waf_v2/wafv2_logging_enabled.guard",
       "controls": [
         "261",
         "1405"
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/amazon_redshift/redshift_cluster_maintenancesettings_check.guard",
+      "guardFilePath": "__tests__/rules/aws/amazon_redshift/redshift_cluster_maintenancesettings_check.guard",
       "controls": [
         "298"
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/elastic_beanstalk/elastic_beanstalk_managed_updates_enabled.guard",
+      "guardFilePath": "__tests__/rules/aws/elastic_beanstalk/elastic_beanstalk_managed_updates_enabled.guard",
       "controls": [
         "298"
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/amazon_rds/rds_automatic_minor_version_upgrade_enabled.guard",
+      "guardFilePath": "__tests__/rules/aws/amazon_rds/rds_automatic_minor_version_upgrade_enabled.guard",
       "controls": [
         "298"
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/api_gateway/api_gw_cache_enabled_and_encrypted.guard",
+      "guardFilePath": "__tests__/rules/aws/api_gateway/api_gw_cache_enabled_and_encrypted.guard",
       "controls": [
         "459"
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/cloudtrail/cloud_trail_encryption_enabled.guard",
+      "guardFilePath": "__tests__/rules/aws/cloudtrail/cloud_trail_encryption_enabled.guard",
       "controls": [
         "459"
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/amazon_ec2/ec2_ebs_encryption_by_default.guard",
+      "guardFilePath": "__tests__/rules/aws/amazon_ec2/ec2_ebs_encryption_by_default.guard",
       "controls": [
         "459"
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/amazon_efs/efs_encrypted_check.guard",
+      "guardFilePath": "__tests__/rules/aws/amazon_efs/efs_encrypted_check.guard",
       "controls": [
         "459"
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/amazon_ec2/encrypted_volumes.guard",
+      "guardFilePath": "__tests__/rules/aws/amazon_ec2/encrypted_volumes.guard",
       "controls": [
         "459"
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/amazon_s3/s3_bucket_server_side_encryption_enabled.guard",
+      "guardFilePath": "__tests__/rules/aws/amazon_s3/s3_bucket_server_side_encryption_enabled.guard",
       "controls": [
         "459"
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/amazon_s3/s3_default_encryption_kms.guard",
+      "guardFilePath": "__tests__/rules/aws/amazon_s3/s3_default_encryption_kms.guard",
       "controls": [
         "459"
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/amazon_redshift/redshift_backup_enabled.guard",
+      "guardFilePath": "__tests__/rules/aws/amazon_redshift/redshift_backup_enabled.guard",
       "controls": [
         "459"
       ]

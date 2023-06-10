@@ -6,14 +6,14 @@
   "contact": "aws-guard-rules-registry@amazon.com",
   "mappings": [
     {
-      "guardFilePath": "test/rules/aws/iam/iam_policy_no_statements_with_admin_access.guard",
+      "guardFilePath": "__tests__/rules/aws/iam/iam_policy_no_statements_with_admin_access.guard",
       "controls": [
         "CIS.4",
         "CIS.16"
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/amazon_redshift/redshift_cluster_configuration_check.guard",
+      "guardFilePath": "__tests__/rules/aws/amazon_redshift/redshift_cluster_configuration_check.guard",
       "controls": [
         "CIS.5",
         "CIS.6",
@@ -21,56 +21,56 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/amazon_redshift/redshift_cluster_maintenancesettings_check.guard",
+      "guardFilePath": "__tests__/rules/aws/amazon_redshift/redshift_cluster_maintenancesettings_check.guard",
       "controls": [
         "CIS.5"
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/api_gateway/api_gw_execution_logging_enabled.guard",
+      "guardFilePath": "__tests__/rules/aws/api_gateway/api_gw_execution_logging_enabled.guard",
       "controls": [
         "CIS.6"
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/cloudtrail/cloud_trail_cloud_watch_logs_enabled.guard",
+      "guardFilePath": "__tests__/rules/aws/cloudtrail/cloud_trail_cloud_watch_logs_enabled.guard",
       "controls": [
         "CIS.6"
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/cloudtrail/cloud_trail_log_file_validation_enabled.guard",
+      "guardFilePath": "__tests__/rules/aws/cloudtrail/cloud_trail_log_file_validation_enabled.guard",
       "controls": [
         "CIS.6"
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/cloudtrail/cloudtrail_s3_dataevents_enabled.guard",
+      "guardFilePath": "__tests__/rules/aws/cloudtrail/cloudtrail_s3_dataevents_enabled.guard",
       "controls": [
         "CIS.6"
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/cloudwatch/cloudwatch_alarm_action_check.guard",
+      "guardFilePath": "__tests__/rules/aws/cloudwatch/cloudwatch_alarm_action_check.guard",
       "controls": [
         "CIS.6",
         "CIS.16"
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/elastic_load_balancing/elb_logging_enabled.guard",
+      "guardFilePath": "__tests__/rules/aws/elastic_load_balancing/elb_logging_enabled.guard",
       "controls": [
         "CIS.6"
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/amazon_s3/s3_bucket_logging_enabled.guard",
+      "guardFilePath": "__tests__/rules/aws/amazon_s3/s3_bucket_logging_enabled.guard",
       "controls": [
         "CIS.6"
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/aws_dms/dms_replication_not_public.guard",
+      "guardFilePath": "__tests__/rules/aws/aws_dms/dms_replication_not_public.guard",
       "controls": [
         "CIS.9",
         "CIS.12",
@@ -78,7 +78,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/amazon_ec2/ec2_instance_no_public_ip.guard",
+      "guardFilePath": "__tests__/rules/aws/amazon_ec2/ec2_instance_no_public_ip.guard",
       "controls": [
         "CIS.9",
         "CIS.12",
@@ -86,21 +86,21 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/opensearch_service/elasticsearch_in_vpc_only.guard",
+      "guardFilePath": "__tests__/rules/aws/opensearch_service/elasticsearch_in_vpc_only.guard",
       "controls": [
         "CIS.9",
         "CIS.12"
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/amazon_emr/emr_master_no_public_ip.guard",
+      "guardFilePath": "__tests__/rules/aws/amazon_emr/emr_master_no_public_ip.guard",
       "controls": [
         "CIS.9",
         "CIS.12"
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/amazon_ec2/restricted_ssh.guard",
+      "guardFilePath": "__tests__/rules/aws/amazon_ec2/restricted_ssh.guard",
       "controls": [
         "CIS.9",
         "CIS.11",
@@ -108,28 +108,28 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/amazon_ec2/ec2_instances_in_vpc.guard",
+      "guardFilePath": "__tests__/rules/aws/amazon_ec2/ec2_instances_in_vpc.guard",
       "controls": [
         "CIS.9",
         "CIS.12"
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/lambda/lambda_function_public_access_prohibited.guard",
+      "guardFilePath": "__tests__/rules/aws/lambda/lambda_function_public_access_prohibited.guard",
       "controls": [
         "CIS.9",
         "CIS.12"
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/lambda/lambda_inside_vpc.guard",
+      "guardFilePath": "__tests__/rules/aws/lambda/lambda_inside_vpc.guard",
       "controls": [
         "CIS.9",
         "CIS.12"
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/amazon_rds/rds_instance_public_access_check.guard",
+      "guardFilePath": "__tests__/rules/aws/amazon_rds/rds_instance_public_access_check.guard",
       "controls": [
         "CIS.9",
         "CIS.12",
@@ -137,7 +137,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/amazon_redshift/redshift_cluster_public_access_check.guard",
+      "guardFilePath": "__tests__/rules/aws/amazon_redshift/redshift_cluster_public_access_check.guard",
       "controls": [
         "CIS.9",
         "CIS.12",
@@ -145,7 +145,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/amazon_ec2/restricted_common_ports.guard",
+      "guardFilePath": "__tests__/rules/aws/amazon_ec2/restricted_common_ports.guard",
       "controls": [
         "CIS.9",
         "CIS.11",
@@ -153,7 +153,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/amazon_s3/s3_bucket_public_read_prohibited.guard",
+      "guardFilePath": "__tests__/rules/aws/amazon_s3/s3_bucket_public_read_prohibited.guard",
       "controls": [
         "CIS.9",
         "CIS.12",
@@ -161,7 +161,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/amazon_s3/s3_bucket_public_write_prohibited.guard",
+      "guardFilePath": "__tests__/rules/aws/amazon_s3/s3_bucket_public_write_prohibited.guard",
       "controls": [
         "CIS.9",
         "CIS.12",
@@ -169,26 +169,26 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/amazon_sagemaker/sagemaker_notebook_no_direct_internet_access.guard",
+      "guardFilePath": "__tests__/rules/aws/amazon_sagemaker/sagemaker_notebook_no_direct_internet_access.guard",
       "controls": [
         "CIS.9",
         "CIS.12"
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/amazon_rds/db_instance_backup_enabled.guard",
+      "guardFilePath": "__tests__/rules/aws/amazon_rds/db_instance_backup_enabled.guard",
       "controls": [
         "CIS.10"
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/dynamodb/dynamodb_pitr_enabled.guard",
+      "guardFilePath": "__tests__/rules/aws/dynamodb/dynamodb_pitr_enabled.guard",
       "controls": [
         "CIS.10"
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/elasticache/elasticache_redis_cluster_automatic_backup_check.guard",
+      "guardFilePath": "__tests__/rules/aws/elasticache/elasticache_redis_cluster_automatic_backup_check.guard",
       "controls": [
         "CIS.10"
       ]

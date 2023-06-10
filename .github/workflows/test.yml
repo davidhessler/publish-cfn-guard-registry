@@ -4,10 +4,6 @@ on: # rebuild any PRs and main branch changes
     branches:
       - main
   pull_request:
-    types:
-      - opened
-      - reopened
-      - edited
     branches:
       - main
     paths-ignore:
