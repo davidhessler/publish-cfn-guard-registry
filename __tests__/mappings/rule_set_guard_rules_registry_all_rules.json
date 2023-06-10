@@ -6,7 +6,7 @@
   "contact": "aws-guard-rules-registry@amazon.com",
   "mappings": [
     {
-      "guardFilePath": "test/rules/aws/codebuild/codebuild_project_source_repo_url_check.guard",
+      "guardFilePath": "__tests__/rules/aws/codebuild/codebuild_project_source_repo_url_check.guard",
       "reportsOn": [
         "AWS::CodeBuild::Project"
       ],
@@ -15,7 +15,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/codebuild/codebuild_project_envvar_awscred_check.guard",
+      "guardFilePath": "__tests__/rules/aws/codebuild/codebuild_project_envvar_awscred_check.guard",
       "reportsOn": [
         "AWS::CodeBuild::Project"
       ],
@@ -24,7 +24,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/amazon_ecs/ecs_task_definition_user_for_host_mode_check.guard",
+      "guardFilePath": "__tests__/rules/aws/amazon_ecs/ecs_task_definition_user_for_host_mode_check.guard",
       "reportsOn": [
         "AWS::ECS::TaskDefinition"
       ],
@@ -33,7 +33,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/cloudwatch/cloudwatch_alarm_action_check.guard",
+      "guardFilePath": "__tests__/rules/aws/cloudwatch/cloudwatch_alarm_action_check.guard",
       "reportsOn": [
         "AWS::CloudWatch::Alarm",
         "AWS::Logs::LogGroup"
@@ -43,7 +43,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/cloudwatch/cw_loggroup_retention_period_check.guard",
+      "guardFilePath": "__tests__/rules/aws/cloudwatch/cw_loggroup_retention_period_check.guard",
       "reportsOn": [
         "AWS::Logs::LogGroup"
       ],
@@ -52,7 +52,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/cloudwatch/cloudwatch_log_group_encrypted.guard",
+      "guardFilePath": "__tests__/rules/aws/cloudwatch/cloudwatch_log_group_encrypted.guard",
       "reportsOn": [
         "AWS::Logs::LogGroup"
       ],
@@ -61,7 +61,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/aws_dms/dms_replication_not_public.guard",
+      "guardFilePath": "__tests__/rules/aws/aws_dms/dms_replication_not_public.guard",
       "reportsOn": [
         "AWS::DMS::ReplicationInstance"
       ],
@@ -70,7 +70,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/amazon_fsx/fsx_resources_protected_by_backup_plan.guard",
+      "guardFilePath": "__tests__/rules/aws/amazon_fsx/fsx_resources_protected_by_backup_plan.guard",
       "reportsOn": [
         "AWS::FSx::FileSystem"
       ],
@@ -79,14 +79,14 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/api_gateway_v2/api_gw_execution_logging_enabled.guard",
+      "guardFilePath": "__tests__/rules/aws/api_gateway_v2/api_gw_execution_logging_enabled.guard",
       "reportsOn": [],
       "controls": [
         "all rules in AWS Guard Rules Registry"
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/api_gateway_v2/api_gwv2_access_logs_enabled.guard",
+      "guardFilePath": "__tests__/rules/aws/api_gateway_v2/api_gwv2_access_logs_enabled.guard",
       "reportsOn": [
         "AWS::ApiGateway::Stage",
         "AWS::ApiGatewayV2::Stage"
@@ -96,7 +96,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/amazon_s3/s3_bucket_ssl_requests_only.guard",
+      "guardFilePath": "__tests__/rules/aws/amazon_s3/s3_bucket_ssl_requests_only.guard",
       "reportsOn": [
         "AWS::S3::Bucket",
         "AWS::S3::BucketPolicy"
@@ -106,7 +106,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/amazon_s3/s3_bucket_logging_enabled.guard",
+      "guardFilePath": "__tests__/rules/aws/amazon_s3/s3_bucket_logging_enabled.guard",
       "reportsOn": [
         "AWS::S3::Bucket"
       ],
@@ -115,7 +115,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/amazon_s3/s3_bucket_public_write_prohibited.guard",
+      "guardFilePath": "__tests__/rules/aws/amazon_s3/s3_bucket_public_write_prohibited.guard",
       "reportsOn": [
         "AWS::S3::Bucket"
       ],
@@ -124,7 +124,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/amazon_s3/s3_bucket_public_read_prohibited.guard",
+      "guardFilePath": "__tests__/rules/aws/amazon_s3/s3_bucket_public_read_prohibited.guard",
       "reportsOn": [
         "AWS::S3::Bucket"
       ],
@@ -133,7 +133,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/amazon_s3/s3_default_encryption_kms.guard",
+      "guardFilePath": "__tests__/rules/aws/amazon_s3/s3_default_encryption_kms.guard",
       "reportsOn": [
         "AWS::S3::Bucket"
       ],
@@ -142,7 +142,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/amazon_s3/s3_bucket_versioning_enabled.guard",
+      "guardFilePath": "__tests__/rules/aws/amazon_s3/s3_bucket_versioning_enabled.guard",
       "reportsOn": [
         "AWS::S3::Bucket"
       ],
@@ -151,7 +151,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/amazon_s3/s3_bucket_level_public_access_prohibited.guard",
+      "guardFilePath": "__tests__/rules/aws/amazon_s3/s3_bucket_level_public_access_prohibited.guard",
       "reportsOn": [
         "AWS::S3::Bucket"
       ],
@@ -160,7 +160,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/amazon_s3/s3_bucket_server_side_encryption_enabled.guard",
+      "guardFilePath": "__tests__/rules/aws/amazon_s3/s3_bucket_server_side_encryption_enabled.guard",
       "reportsOn": [
         "AWS::S3::Bucket"
       ],
@@ -169,14 +169,14 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/amazon_s3/s3_bucket_policy_grantee_check.guard",
+      "guardFilePath": "__tests__/rules/aws/amazon_s3/s3_bucket_policy_grantee_check.guard",
       "reportsOn": [],
       "controls": [
         "all rules in AWS Guard Rules Registry"
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/amazon_s3/s3_bucket_default_lock_enabled.guard",
+      "guardFilePath": "__tests__/rules/aws/amazon_s3/s3_bucket_default_lock_enabled.guard",
       "reportsOn": [
         "AWS::S3::Bucket"
       ],
@@ -185,7 +185,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/amazon_s3/s3_bucket_replication_enabled.guard",
+      "guardFilePath": "__tests__/rules/aws/amazon_s3/s3_bucket_replication_enabled.guard",
       "reportsOn": [
         "AWS::S3::Bucket"
       ],
@@ -194,7 +194,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/cloudfront/cloudfront_accesslogs_enabled.guard",
+      "guardFilePath": "__tests__/rules/aws/cloudfront/cloudfront_accesslogs_enabled.guard",
       "reportsOn": [
         "AWS::CloudFront::Distribution"
       ],
@@ -203,7 +203,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/cloudfront/cloudfront_custom_ssl_certificate.guard",
+      "guardFilePath": "__tests__/rules/aws/cloudfront/cloudfront_custom_ssl_certificate.guard",
       "reportsOn": [
         "AWS::CloudFront::Distribution"
       ],
@@ -212,7 +212,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/cloudfront/cloudfront_origin_failover_enabled.guard",
+      "guardFilePath": "__tests__/rules/aws/cloudfront/cloudfront_origin_failover_enabled.guard",
       "reportsOn": [
         "AWS::CloudFront::Distribution"
       ],
@@ -221,7 +221,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/cloudfront/cloudfront_sni_enabled.guard",
+      "guardFilePath": "__tests__/rules/aws/cloudfront/cloudfront_sni_enabled.guard",
       "reportsOn": [
         "AWS::CloudFront::Distribution"
       ],
@@ -230,7 +230,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/cloudfront/cloudfront_origin_access_identity_enabled.guard",
+      "guardFilePath": "__tests__/rules/aws/cloudfront/cloudfront_origin_access_identity_enabled.guard",
       "reportsOn": [
         "AWS::CloudFront::Distribution",
         "AWS::S3::Bucket"
@@ -240,7 +240,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/cloudfront/cloudfront_viewer_policy_https.guard",
+      "guardFilePath": "__tests__/rules/aws/cloudfront/cloudfront_viewer_policy_https.guard",
       "reportsOn": [
         "AWS::CloudFront::Distribution"
       ],
@@ -249,7 +249,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/cloudfront/cloudfront_default_root_object_configured.guard",
+      "guardFilePath": "__tests__/rules/aws/cloudfront/cloudfront_default_root_object_configured.guard",
       "reportsOn": [
         "AWS::CloudFront::Distribution"
       ],
@@ -258,14 +258,14 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/cloudfront/cloudfront_associated_with_waf.guard",
+      "guardFilePath": "__tests__/rules/aws/cloudfront/cloudfront_associated_with_waf.guard",
       "reportsOn": [],
       "controls": [
         "all rules in AWS Guard Rules Registry"
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/amazon_sns/sns_encrypted_kms.guard",
+      "guardFilePath": "__tests__/rules/aws/amazon_sns/sns_encrypted_kms.guard",
       "reportsOn": [
         "AWS::SNS::Topic"
       ],
@@ -274,7 +274,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/elastic_load_balancing_v2/alb_http_drop_invalid_header_enabled.guard",
+      "guardFilePath": "__tests__/rules/aws/elastic_load_balancing_v2/alb_http_drop_invalid_header_enabled.guard",
       "reportsOn": [
         "AWS::ElasticLoadBalancingV2::LoadBalancer"
       ],
@@ -283,7 +283,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/elastic_load_balancing_v2/elb_deletion_protection_enabled.guard",
+      "guardFilePath": "__tests__/rules/aws/elastic_load_balancing_v2/elb_deletion_protection_enabled.guard",
       "reportsOn": [
         "AWS::ElasticLoadBalancingV2::LoadBalancer"
       ],
@@ -292,21 +292,21 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/elastic_load_balancing_v2/alb_waf_enabled.guard",
+      "guardFilePath": "__tests__/rules/aws/elastic_load_balancing_v2/alb_waf_enabled.guard",
       "reportsOn": [],
       "controls": [
         "all rules in AWS Guard Rules Registry"
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/elastic_load_balancing_v2/alb_http_to_https_redirection_check.guard",
+      "guardFilePath": "__tests__/rules/aws/elastic_load_balancing_v2/alb_http_to_https_redirection_check.guard",
       "reportsOn": [],
       "controls": [
         "all rules in AWS Guard Rules Registry"
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/elastic_load_balancing_v2/elbv2_acm_certificate_required.guard",
+      "guardFilePath": "__tests__/rules/aws/elastic_load_balancing_v2/elbv2_acm_certificate_required.guard",
       "reportsOn": [
         "AWS::CertificateManager::Certificate",
         "AWS::ElasticLoadBalancingV2::Listener"
@@ -316,7 +316,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/api_gateway/api_gw_cache_enabled_and_encrypted.guard",
+      "guardFilePath": "__tests__/rules/aws/api_gateway/api_gw_cache_enabled_and_encrypted.guard",
       "reportsOn": [
         "AWS::ApiGateway::Stage"
       ],
@@ -325,7 +325,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/api_gateway/api_gw_execution_logging_enabled.guard",
+      "guardFilePath": "__tests__/rules/aws/api_gateway/api_gw_execution_logging_enabled.guard",
       "reportsOn": [
         "AWS::ApiGateway::Stage"
       ],
@@ -334,7 +334,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/api_gateway/api_gw_endpoint_type_check.guard",
+      "guardFilePath": "__tests__/rules/aws/api_gateway/api_gw_endpoint_type_check.guard",
       "reportsOn": [
         "AWS::ApiGateway::DomainName"
       ],
@@ -343,7 +343,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/api_gateway/api_gw_domain_deny_non_tls_traffic.guard",
+      "guardFilePath": "__tests__/rules/aws/api_gateway/api_gw_domain_deny_non_tls_traffic.guard",
       "reportsOn": [
         "AWS::ApiGateway::DomainName"
       ],
@@ -352,7 +352,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/amazon_redshift/redshift_cluster_public_access_check.guard",
+      "guardFilePath": "__tests__/rules/aws/amazon_redshift/redshift_cluster_public_access_check.guard",
       "reportsOn": [
         "AWS::EKS::Cluster",
         "AWS::Redshift::Cluster"
@@ -362,7 +362,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/amazon_redshift/redshift_backup_enabled.guard",
+      "guardFilePath": "__tests__/rules/aws/amazon_redshift/redshift_backup_enabled.guard",
       "reportsOn": [
         "AWS::Redshift::Cluster"
       ],
@@ -371,7 +371,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/amazon_redshift/redshift_cluster_maintenancesettings_check.guard",
+      "guardFilePath": "__tests__/rules/aws/amazon_redshift/redshift_cluster_maintenancesettings_check.guard",
       "reportsOn": [
         "AWS::Redshift::Cluster"
       ],
@@ -380,7 +380,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/amazon_redshift/redshift_enhanced_vpc_routing_enabled.guard",
+      "guardFilePath": "__tests__/rules/aws/amazon_redshift/redshift_enhanced_vpc_routing_enabled.guard",
       "reportsOn": [
         "AWS::Redshift::Cluster"
       ],
@@ -389,7 +389,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/amazon_redshift/redshift_cluster_configuration_check.guard",
+      "guardFilePath": "__tests__/rules/aws/amazon_redshift/redshift_cluster_configuration_check.guard",
       "reportsOn": [
         "AWS::Redshift::Cluster"
       ],
@@ -398,7 +398,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/amazon_sagemaker/sagemaker_notebook_instance_kms_key_configured.guard",
+      "guardFilePath": "__tests__/rules/aws/amazon_sagemaker/sagemaker_notebook_instance_kms_key_configured.guard",
       "reportsOn": [
         "AWS::SageMaker::NotebookInstance"
       ],
@@ -407,7 +407,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/amazon_sagemaker/sagemaker_endpoint_configuration_kms_key_configured.guard",
+      "guardFilePath": "__tests__/rules/aws/amazon_sagemaker/sagemaker_endpoint_configuration_kms_key_configured.guard",
       "reportsOn": [
         "AWS::SageMaker::Endpoint",
         "AWS::SageMaker::EndpointConfig"
@@ -417,7 +417,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/amazon_sagemaker/sagemaker_notebook_no_direct_internet_access.guard",
+      "guardFilePath": "__tests__/rules/aws/amazon_sagemaker/sagemaker_notebook_no_direct_internet_access.guard",
       "reportsOn": [
         "AWS::SageMaker::NotebookInstance"
       ],
@@ -426,14 +426,14 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/dynamodb/dynamodb_resources_protected_by_backup_plan.guard",
+      "guardFilePath": "__tests__/rules/aws/dynamodb/dynamodb_resources_protected_by_backup_plan.guard",
       "reportsOn": [],
       "controls": [
         "all rules in AWS Guard Rules Registry"
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/dynamodb/dynamodb_table_must_be_encrypted.guard",
+      "guardFilePath": "__tests__/rules/aws/dynamodb/dynamodb_table_must_be_encrypted.guard",
       "reportsOn": [
         "AWS::DynamoDB::Table"
       ],
@@ -442,7 +442,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/dynamodb/dynamodb_table_encrypted_kms.guard",
+      "guardFilePath": "__tests__/rules/aws/dynamodb/dynamodb_table_encrypted_kms.guard",
       "reportsOn": [
         "AWS::DynamoDB::Table"
       ],
@@ -451,21 +451,21 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/dynamodb/dynamodb_in_backup_plan.guard",
+      "guardFilePath": "__tests__/rules/aws/dynamodb/dynamodb_in_backup_plan.guard",
       "reportsOn": [],
       "controls": [
         "all rules in AWS Guard Rules Registry"
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/dynamodb/dynamodb_throughput_limit_check.guard",
+      "guardFilePath": "__tests__/rules/aws/dynamodb/dynamodb_throughput_limit_check.guard",
       "reportsOn": [],
       "controls": [
         "all rules in AWS Guard Rules Registry"
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/dynamodb/dynamodb_pitr_enabled.guard",
+      "guardFilePath": "__tests__/rules/aws/dynamodb/dynamodb_pitr_enabled.guard",
       "reportsOn": [
         "AWS::DynamoDB::Table"
       ],
@@ -474,14 +474,14 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/dynamodb/dynamodb_autoscaling_enabled.guard",
+      "guardFilePath": "__tests__/rules/aws/dynamodb/dynamodb_autoscaling_enabled.guard",
       "reportsOn": [],
       "controls": [
         "all rules in AWS Guard Rules Registry"
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/secrets_manager/secretsmanager_rotation_enabled_check.guard",
+      "guardFilePath": "__tests__/rules/aws/secrets_manager/secretsmanager_rotation_enabled_check.guard",
       "reportsOn": [
         "AWS::SecretsManager::RotationSchedule",
         "AWS::SecretsManager::Secret"
@@ -491,7 +491,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/secrets_manager/secretsmanager_using_cmk.guard",
+      "guardFilePath": "__tests__/rules/aws/secrets_manager/secretsmanager_using_cmk.guard",
       "reportsOn": [
         "AWS::SageMaker::Endpoint",
         "AWS::SageMaker::EndpointConfig",
@@ -502,7 +502,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/elastic_load_balancing/elb_acm_certificate_required.guard",
+      "guardFilePath": "__tests__/rules/aws/elastic_load_balancing/elb_acm_certificate_required.guard",
       "reportsOn": [
         "AWS::CertificateManager::Certificate",
         "AWS::ElasticLoadBalancing::LoadBalancer"
@@ -512,7 +512,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/elastic_load_balancing/elb_predefined_security_policy_ssl_check.guard",
+      "guardFilePath": "__tests__/rules/aws/elastic_load_balancing/elb_predefined_security_policy_ssl_check.guard",
       "reportsOn": [
         "AWS::ElasticLoadBalancing::LoadBalancer"
       ],
@@ -521,7 +521,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/elastic_load_balancing/elb_tls_https_listeners_only.guard",
+      "guardFilePath": "__tests__/rules/aws/elastic_load_balancing/elb_tls_https_listeners_only.guard",
       "reportsOn": [
         "AWS::ElasticLoadBalancing::LoadBalancer"
       ],
@@ -530,7 +530,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/elastic_load_balancing/elb_logging_enabled.guard",
+      "guardFilePath": "__tests__/rules/aws/elastic_load_balancing/elb_logging_enabled.guard",
       "reportsOn": [
         "AWS::ElasticLoadBalancing::LoadBalancer"
       ],
@@ -539,7 +539,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/elastic_load_balancing/elb_cross_zone_load_balancing_enabled.guard",
+      "guardFilePath": "__tests__/rules/aws/elastic_load_balancing/elb_cross_zone_load_balancing_enabled.guard",
       "reportsOn": [
         "AWS::ElasticLoadBalancing::LoadBalancer"
       ],
@@ -548,35 +548,35 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/aws_waf_v2/wafv2_logging_enabled.guard",
+      "guardFilePath": "__tests__/rules/aws/aws_waf_v2/wafv2_logging_enabled.guard",
       "reportsOn": [],
       "controls": [
         "all rules in AWS Guard Rules Registry"
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/elastic_beanstalk/elastic_beanstalk_managed_updates_enabled.guard",
+      "guardFilePath": "__tests__/rules/aws/elastic_beanstalk/elastic_beanstalk_managed_updates_enabled.guard",
       "reportsOn": [],
       "controls": [
         "all rules in AWS Guard Rules Registry"
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/elastic_beanstalk/beanstalk_enhanced_health_reporting_enabled.guard",
+      "guardFilePath": "__tests__/rules/aws/elastic_beanstalk/beanstalk_enhanced_health_reporting_enabled.guard",
       "reportsOn": [],
       "controls": [
         "all rules in AWS Guard Rules Registry"
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/amazon_emr/emr_master_no_public_ip.guard",
+      "guardFilePath": "__tests__/rules/aws/amazon_emr/emr_master_no_public_ip.guard",
       "reportsOn": [],
       "controls": [
         "all rules in AWS Guard Rules Registry"
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/amazon_emr/emr_kerberos_enabled.guard",
+      "guardFilePath": "__tests__/rules/aws/amazon_emr/emr_kerberos_enabled.guard",
       "reportsOn": [
         "AWS::EMR::Cluster"
       ],
@@ -585,7 +585,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/amazon_rds/rds_logging_enabled.guard",
+      "guardFilePath": "__tests__/rules/aws/amazon_rds/rds_logging_enabled.guard",
       "reportsOn": [
         "AWS::RDS::DBInstance"
       ],
@@ -594,7 +594,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/amazon_rds/rds_instance_public_access_check.guard",
+      "guardFilePath": "__tests__/rules/aws/amazon_rds/rds_instance_public_access_check.guard",
       "reportsOn": [
         "AWS::RDS::DBInstance"
       ],
@@ -603,7 +603,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/amazon_rds/db_instance_backup_enabled.guard",
+      "guardFilePath": "__tests__/rules/aws/amazon_rds/db_instance_backup_enabled.guard",
       "reportsOn": [
         "AWS::RDS::DBInstance"
       ],
@@ -612,7 +612,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/amazon_rds/rds_automatic_minor_version_upgrade_enabled.guard",
+      "guardFilePath": "__tests__/rules/aws/amazon_rds/rds_automatic_minor_version_upgrade_enabled.guard",
       "reportsOn": [
         "AWS::RDS::DBInstance"
       ],
@@ -621,7 +621,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/amazon_rds/aurora_mysql_backtracking_enabled.guard",
+      "guardFilePath": "__tests__/rules/aws/amazon_rds/aurora_mysql_backtracking_enabled.guard",
       "reportsOn": [
         "AWS::RDS::DBCluster"
       ],
@@ -630,7 +630,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/amazon_rds/rds_multi_az_support.guard",
+      "guardFilePath": "__tests__/rules/aws/amazon_rds/rds_multi_az_support.guard",
       "reportsOn": [
         "AWS::RDS::DBInstance"
       ],
@@ -639,7 +639,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/amazon_rds/rds_snapshot_encrypted.guard",
+      "guardFilePath": "__tests__/rules/aws/amazon_rds/rds_snapshot_encrypted.guard",
       "reportsOn": [
         "AWS::RDS::DBInstance"
       ],
@@ -648,7 +648,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/amazon_rds/rds_enhanced_monitoring_enabled.guard",
+      "guardFilePath": "__tests__/rules/aws/amazon_rds/rds_enhanced_monitoring_enabled.guard",
       "reportsOn": [
         "AWS::RDS::DBInstance"
       ],
@@ -657,7 +657,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/amazon_rds/rds_instance_deletion_protection_enabled.guard",
+      "guardFilePath": "__tests__/rules/aws/amazon_rds/rds_instance_deletion_protection_enabled.guard",
       "reportsOn": [
         "AWS::RDS::DBInstance"
       ],
@@ -666,7 +666,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/amazon_rds/rds_storage_encrypted.guard",
+      "guardFilePath": "__tests__/rules/aws/amazon_rds/rds_storage_encrypted.guard",
       "reportsOn": [
         "AWS::RDS::DBInstance"
       ],
@@ -675,7 +675,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/cloudtrail/cloud_trail_log_file_validation_enabled.guard",
+      "guardFilePath": "__tests__/rules/aws/cloudtrail/cloud_trail_log_file_validation_enabled.guard",
       "reportsOn": [
         "AWS::CloudTrail::Trail"
       ],
@@ -684,7 +684,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/cloudtrail/cloud_trail_enabled.guard",
+      "guardFilePath": "__tests__/rules/aws/cloudtrail/cloud_trail_enabled.guard",
       "reportsOn": [
         "AWS::CloudTrail::Trail"
       ],
@@ -693,7 +693,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/cloudtrail/cloudtrail_s3_dataevents_enabled.guard",
+      "guardFilePath": "__tests__/rules/aws/cloudtrail/cloudtrail_s3_dataevents_enabled.guard",
       "reportsOn": [
         "AWS::CloudTrail::Trail"
       ],
@@ -702,7 +702,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/cloudtrail/cloud_trail_cloud_watch_logs_enabled.guard",
+      "guardFilePath": "__tests__/rules/aws/cloudtrail/cloud_trail_cloud_watch_logs_enabled.guard",
       "reportsOn": [
         "AWS::CloudTrail::Trail"
       ],
@@ -711,7 +711,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/cloudtrail/multi_region_cloud_trail_enabled.guard",
+      "guardFilePath": "__tests__/rules/aws/cloudtrail/multi_region_cloud_trail_enabled.guard",
       "reportsOn": [
         "AWS::CloudTrail::Trail"
       ],
@@ -720,7 +720,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/cloudtrail/cloud_trail_encryption_enabled.guard",
+      "guardFilePath": "__tests__/rules/aws/cloudtrail/cloud_trail_encryption_enabled.guard",
       "reportsOn": [
         "AWS::CloudTrail::Trail"
       ],
@@ -729,7 +729,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/opensearch_service/elasticsearch_primary_node_fault_tolerance.guard",
+      "guardFilePath": "__tests__/rules/aws/opensearch_service/elasticsearch_primary_node_fault_tolerance.guard",
       "reportsOn": [
         "AWS::Elasticsearch::Domain"
       ],
@@ -738,7 +738,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/opensearch_service/opensearch_in_vpc_only.guard",
+      "guardFilePath": "__tests__/rules/aws/opensearch_service/opensearch_in_vpc_only.guard",
       "reportsOn": [
         "AWS::OpenSearchService::Domain"
       ],
@@ -747,7 +747,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/opensearch_service/opensearch_application_logging_enabled.guard",
+      "guardFilePath": "__tests__/rules/aws/opensearch_service/opensearch_application_logging_enabled.guard",
       "reportsOn": [
         "AWS::OpenSearchService::Domain"
       ],
@@ -756,7 +756,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/opensearch_service/elasticsearch_data_node_fault_tolerance.guard",
+      "guardFilePath": "__tests__/rules/aws/opensearch_service/elasticsearch_data_node_fault_tolerance.guard",
       "reportsOn": [
         "AWS::Elasticsearch::Domain"
       ],
@@ -765,7 +765,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/opensearch_service/elasticsearch_audit_logging_enabled.guard",
+      "guardFilePath": "__tests__/rules/aws/opensearch_service/elasticsearch_audit_logging_enabled.guard",
       "reportsOn": [
         "AWS::Elasticsearch::Domain"
       ],
@@ -774,7 +774,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/opensearch_service/opensearch_encrypted_at_rest.guard",
+      "guardFilePath": "__tests__/rules/aws/opensearch_service/opensearch_encrypted_at_rest.guard",
       "reportsOn": [
         "AWS::OpenSearchService::Domain"
       ],
@@ -783,7 +783,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/opensearch_service/opensearch_data_node_fault_tolerance.guard",
+      "guardFilePath": "__tests__/rules/aws/opensearch_service/opensearch_data_node_fault_tolerance.guard",
       "reportsOn": [
         "AWS::OpenSearchService::Domain"
       ],
@@ -792,7 +792,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/opensearch_service/elasticsearch_https_required.guard",
+      "guardFilePath": "__tests__/rules/aws/opensearch_service/elasticsearch_https_required.guard",
       "reportsOn": [
         "AWS::Elasticsearch::Domain"
       ],
@@ -801,7 +801,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/opensearch_service/elasticsearch_in_vpc_only.guard",
+      "guardFilePath": "__tests__/rules/aws/opensearch_service/elasticsearch_in_vpc_only.guard",
       "reportsOn": [
         "AWS::Elasticsearch::Domain"
       ],
@@ -810,7 +810,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/opensearch_service/opensearch_node_to_node_encryption_check.guard",
+      "guardFilePath": "__tests__/rules/aws/opensearch_service/opensearch_node_to_node_encryption_check.guard",
       "reportsOn": [
         "AWS::OpenSearchService::Domain"
       ],
@@ -819,7 +819,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/opensearch_service/elasticsearch_application_logging_enabled.guard",
+      "guardFilePath": "__tests__/rules/aws/opensearch_service/elasticsearch_application_logging_enabled.guard",
       "reportsOn": [
         "AWS::Elasticsearch::Domain"
       ],
@@ -828,7 +828,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/opensearch_service/elasticsearch_logs_to_cloudwatch.guard",
+      "guardFilePath": "__tests__/rules/aws/opensearch_service/elasticsearch_logs_to_cloudwatch.guard",
       "reportsOn": [
         "AWS::Elasticsearch::Domain"
       ],
@@ -837,7 +837,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/opensearch_service/opensearch_https_required.guard",
+      "guardFilePath": "__tests__/rules/aws/opensearch_service/opensearch_https_required.guard",
       "reportsOn": [
         "AWS::OpenSearchService::Domain"
       ],
@@ -846,7 +846,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/opensearch_service/elasticsearch_node_to_node_encryption_check.guard",
+      "guardFilePath": "__tests__/rules/aws/opensearch_service/elasticsearch_node_to_node_encryption_check.guard",
       "reportsOn": [
         "AWS::Elasticsearch::Domain"
       ],
@@ -855,7 +855,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/opensearch_service/opensearch_access_control_enabled.guard",
+      "guardFilePath": "__tests__/rules/aws/opensearch_service/opensearch_access_control_enabled.guard",
       "reportsOn": [
         "AWS::OpenSearchService::Domain"
       ],
@@ -864,7 +864,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/opensearch_service/opensearch_audit_logging_enabled.guard",
+      "guardFilePath": "__tests__/rules/aws/opensearch_service/opensearch_audit_logging_enabled.guard",
       "reportsOn": [
         "AWS::OpenSearchService::Domain"
       ],
@@ -873,7 +873,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/opensearch_service/elasticsearch_encrypted_at_rest.guard",
+      "guardFilePath": "__tests__/rules/aws/opensearch_service/elasticsearch_encrypted_at_rest.guard",
       "reportsOn": [
         "AWS::Elasticsearch::Domain"
       ],
@@ -882,7 +882,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/amazon_ec2_auto_scaling/autoscaling_group_elb_healthcheck_required.guard",
+      "guardFilePath": "__tests__/rules/aws/amazon_ec2_auto_scaling/autoscaling_group_elb_healthcheck_required.guard",
       "reportsOn": [
         "AWS::AutoScaling::AutoScalingGroup"
       ],
@@ -891,7 +891,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/amazon_ec2_auto_scaling/autoscaling_launch_config_public_ip_disabled.guard",
+      "guardFilePath": "__tests__/rules/aws/amazon_ec2_auto_scaling/autoscaling_launch_config_public_ip_disabled.guard",
       "reportsOn": [
         "AWS::AutoScaling::LaunchConfiguration"
       ],
@@ -900,7 +900,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/amazon_efs/efs_resources_protected_by_backup_plan.guard",
+      "guardFilePath": "__tests__/rules/aws/amazon_efs/efs_resources_protected_by_backup_plan.guard",
       "reportsOn": [
         "AWS::EFS::FileSystem"
       ],
@@ -909,7 +909,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/amazon_efs/efs_encrypted_check.guard",
+      "guardFilePath": "__tests__/rules/aws/amazon_efs/efs_encrypted_check.guard",
       "reportsOn": [
         "AWS::EFS::FileSystem"
       ],
@@ -918,7 +918,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/iam/iam_user_no_policies_check.guard",
+      "guardFilePath": "__tests__/rules/aws/iam/iam_user_no_policies_check.guard",
       "reportsOn": [
         "AWS::IAM::User"
       ],
@@ -927,7 +927,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/iam/iam_policy_no_statements_with_full_access.guard",
+      "guardFilePath": "__tests__/rules/aws/iam/iam_policy_no_statements_with_full_access.guard",
       "reportsOn": [
         "AWS::IAM::ManagedPolicy"
       ],
@@ -936,7 +936,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/iam/iam_policy_no_statements_with_admin_access.guard",
+      "guardFilePath": "__tests__/rules/aws/iam/iam_policy_no_statements_with_admin_access.guard",
       "reportsOn": [
         "AWS::IAM::Policy"
       ],
@@ -945,7 +945,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/iam/iam_no_inline_policy_check.guard",
+      "guardFilePath": "__tests__/rules/aws/iam/iam_no_inline_policy_check.guard",
       "reportsOn": [
         "AWS::IAM::Group",
         "AWS::IAM::Role",
@@ -956,7 +956,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/amazon_ec2/restricted_common_ports.guard",
+      "guardFilePath": "__tests__/rules/aws/amazon_ec2/restricted_common_ports.guard",
       "reportsOn": [
         "AWS::EC2::SecurityGroup"
       ],
@@ -965,7 +965,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/amazon_ec2/ec2_instances_in_vpc.guard",
+      "guardFilePath": "__tests__/rules/aws/amazon_ec2/ec2_instances_in_vpc.guard",
       "reportsOn": [
         "AWS::EC2::Instance"
       ],
@@ -974,7 +974,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/amazon_ec2/ec2_ebs_encryption_by_default.guard",
+      "guardFilePath": "__tests__/rules/aws/amazon_ec2/ec2_ebs_encryption_by_default.guard",
       "reportsOn": [
         "AWS::EC2::Volume"
       ],
@@ -983,7 +983,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/amazon_ec2/ec2_instance_detailed_monitoring_enabled.guard",
+      "guardFilePath": "__tests__/rules/aws/amazon_ec2/ec2_instance_detailed_monitoring_enabled.guard",
       "reportsOn": [
         "AWS::EC2::Instance"
       ],
@@ -992,7 +992,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/amazon_ec2/subnet_auto_assign_public_ip_disabled.guard",
+      "guardFilePath": "__tests__/rules/aws/amazon_ec2/subnet_auto_assign_public_ip_disabled.guard",
       "reportsOn": [
         "AWS::EC2::Subnet"
       ],
@@ -1001,7 +1001,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/amazon_ec2/no_unrestricted_route_to_igw.guard",
+      "guardFilePath": "__tests__/rules/aws/amazon_ec2/no_unrestricted_route_to_igw.guard",
       "reportsOn": [
         "AWS::EC2::Route"
       ],
@@ -1010,7 +1010,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/amazon_ec2/encrypted_volumes.guard",
+      "guardFilePath": "__tests__/rules/aws/amazon_ec2/encrypted_volumes.guard",
       "reportsOn": [
         "AWS::EC2::Volume"
       ],
@@ -1019,7 +1019,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/amazon_ec2/restricted_ssh.guard",
+      "guardFilePath": "__tests__/rules/aws/amazon_ec2/restricted_ssh.guard",
       "reportsOn": [
         "AWS::EC2::SecurityGroup"
       ],
@@ -1028,7 +1028,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/amazon_ec2/ec2_instance_no_public_ip.guard",
+      "guardFilePath": "__tests__/rules/aws/amazon_ec2/ec2_instance_no_public_ip.guard",
       "reportsOn": [
         "AWS::EC2::Instance"
       ],
@@ -1037,7 +1037,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/amazon_ec2/ebs_optimized_instance.guard",
+      "guardFilePath": "__tests__/rules/aws/amazon_ec2/ebs_optimized_instance.guard",
       "reportsOn": [
         "AWS::EC2::Instance"
       ],
@@ -1046,7 +1046,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/amazon_ec2/ec2_instance_profile_attached.guard",
+      "guardFilePath": "__tests__/rules/aws/amazon_ec2/ec2_instance_profile_attached.guard",
       "reportsOn": [
         "AWS::EC2::Instance"
       ],
@@ -1055,7 +1055,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/lambda/lambda_inside_vpc.guard",
+      "guardFilePath": "__tests__/rules/aws/lambda/lambda_inside_vpc.guard",
       "reportsOn": [
         "AWS::Lambda::Function"
       ],
@@ -1064,7 +1064,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/lambda/lambda_concurrency_check.guard",
+      "guardFilePath": "__tests__/rules/aws/lambda/lambda_concurrency_check.guard",
       "reportsOn": [
         "AWS::Lambda::Function"
       ],
@@ -1073,7 +1073,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/lambda/lambda_function_public_access_prohibited.guard",
+      "guardFilePath": "__tests__/rules/aws/lambda/lambda_function_public_access_prohibited.guard",
       "reportsOn": [
         "AWS::Lambda::LayerVersion",
         "AWS::Lambda::LayerVersionPermission",
@@ -1084,7 +1084,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/lambda/lambda_dlq_check.guard",
+      "guardFilePath": "__tests__/rules/aws/lambda/lambda_dlq_check.guard",
       "reportsOn": [
         "AWS::Lambda::Function"
       ],
@@ -1093,21 +1093,21 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/aws_backup/backup_plan_min_frequency_and_min_retention_check.guard",
+      "guardFilePath": "__tests__/rules/aws/aws_backup/backup_plan_min_frequency_and_min_retention_check.guard",
       "reportsOn": [],
       "controls": [
         "all rules in AWS Guard Rules Registry"
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/aws_kms/kms_cmk_not_scheduled_for_deletion.guard",
+      "guardFilePath": "__tests__/rules/aws/aws_kms/kms_cmk_not_scheduled_for_deletion.guard",
       "reportsOn": [],
       "controls": [
         "all rules in AWS Guard Rules Registry"
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/aws_kms/cmk_backing_key_rotation_enabled.guard",
+      "guardFilePath": "__tests__/rules/aws/aws_kms/cmk_backing_key_rotation_enabled.guard",
       "reportsOn": [
         "AWS::KMS::Key"
       ],
@@ -1116,7 +1116,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/dax/dax_encryption_enabled.guard",
+      "guardFilePath": "__tests__/rules/aws/dax/dax_encryption_enabled.guard",
       "reportsOn": [
         "AWS::CodeBuild::Project",
         "AWS::DAX::Cluster"
@@ -1126,7 +1126,7 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/elasticache/elasticache_redis_cluster_automatic_backup_check.guard",
+      "guardFilePath": "__tests__/rules/aws/elasticache/elasticache_redis_cluster_automatic_backup_check.guard",
       "reportsOn": [
         "AWS::ElastiCache::ReplicationGroup"
       ],
@@ -1135,14 +1135,14 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/aws_certificate_manager/acm_certificate_expiration_check.guard",
+      "guardFilePath": "__tests__/rules/aws/aws_certificate_manager/acm_certificate_expiration_check.guard",
       "reportsOn": [],
       "controls": [
         "all rules in AWS Guard Rules Registry"
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/amazon_eks/eks_endpoint_no_public_access.guard",
+      "guardFilePath": "__tests__/rules/aws/amazon_eks/eks_endpoint_no_public_access.guard",
       "reportsOn": [
         "AWS::EKS::Cluster"
       ],

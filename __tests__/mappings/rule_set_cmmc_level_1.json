@@ -222,81 +222,81 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/cloudtrail/cloudtrail_s3_dataevents_enabled.guard",
+      "guardFilePath": "__tests__/rules/aws/cloudtrail/cloudtrail_s3_dataevents_enabled.guard",
       "controls": [
         "IA.1.076"
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/cloudtrail/cloud_trail_cloud_watch_logs_enabled.guard",
+      "guardFilePath": "__tests__/rules/aws/cloudtrail/cloud_trail_cloud_watch_logs_enabled.guard",
       "controls": [
         "IA.1.076"
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/elastic_load_balancing/elb_logging_enabled.guard",
+      "guardFilePath": "__tests__/rules/aws/elastic_load_balancing/elb_logging_enabled.guard",
       "controls": [
         "IA.1.076"
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/amazon_rds/rds_logging_enabled.guard",
+      "guardFilePath": "__tests__/rules/aws/amazon_rds/rds_logging_enabled.guard",
       "controls": [
         "IA.1.076"
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/amazon_s3/s3_bucket_logging_enabled.guard",
+      "guardFilePath": "__tests__/rules/aws/amazon_s3/s3_bucket_logging_enabled.guard",
       "controls": [
         "IA.1.076"
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/aws_waf_v2/wafv2_logging_enabled.guard",
+      "guardFilePath": "__tests__/rules/aws/aws_waf_v2/wafv2_logging_enabled.guard",
       "controls": [
         "IA.1.076"
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/elastic_load_balancing_v2/alb_http_drop_invalid_header_enabled.guard",
+      "guardFilePath": "__tests__/rules/aws/elastic_load_balancing_v2/alb_http_drop_invalid_header_enabled.guard",
       "controls": [
         "SC.1.175"
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/elastic_load_balancing_v2/alb_http_to_https_redirection_check.guard",
+      "guardFilePath": "__tests__/rules/aws/elastic_load_balancing_v2/alb_http_to_https_redirection_check.guard",
       "controls": [
         "SC.1.175"
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/cloudwatch/cloudwatch_alarm_action_check.guard",
+      "guardFilePath": "__tests__/rules/aws/cloudwatch/cloudwatch_alarm_action_check.guard",
       "controls": [
         "SC.1.175",
         "SI.1.210"
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/opensearch_service/elasticsearch_node_to_node_encryption_check.guard",
+      "guardFilePath": "__tests__/rules/aws/opensearch_service/elasticsearch_node_to_node_encryption_check.guard",
       "controls": [
         "SC.1.175"
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/elastic_load_balancing/elb_acm_certificate_required.guard",
+      "guardFilePath": "__tests__/rules/aws/elastic_load_balancing/elb_acm_certificate_required.guard",
       "controls": [
         "SC.1.175"
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/elastic_load_balancing/elb_tls_https_listeners_only.guard",
+      "guardFilePath": "__tests__/rules/aws/elastic_load_balancing/elb_tls_https_listeners_only.guard",
       "controls": [
         "SC.1.175"
       ]
     },
 
     {
-      "guardFilePath": "test/rules/aws/amazon_s3/s3_bucket_ssl_requests_only.guard",
+      "guardFilePath": "__tests__/rules/aws/amazon_s3/s3_bucket_ssl_requests_only.guard",
       "controls": [
         "SC.1.175"
       ]

@@ -186,37 +186,37 @@
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/amazon_s3/s3_bucket_server_side_encryption_enabled.guard",
+      "guardFilePath": "__tests__/rules/aws/amazon_s3/s3_bucket_server_side_encryption_enabled.guard",
       "controls": [
         "CIP-011-3-R1-Part 1.2"
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/amazon_s3/s3_bucket_ssl_requests_only.guard",
+      "guardFilePath": "__tests__/rules/aws/amazon_s3/s3_bucket_ssl_requests_only.guard",
       "controls": [
         "CIP-011-3-R1-Part 1.2"
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/amazon_s3/s3_default_encryption_kms.guard",
+      "guardFilePath": "__tests__/rules/aws/amazon_s3/s3_default_encryption_kms.guard",
       "controls": [
         "CIP-011-3-R1-Part 1.2"
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/amazon_sagemaker/sagemaker_endpoint_configuration_kms_key_configured.guard",
+      "guardFilePath": "__tests__/rules/aws/amazon_sagemaker/sagemaker_endpoint_configuration_kms_key_configured.guard",
       "controls": [
         "CIP-011-3-R1-Part 1.2"
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/amazon_sagemaker/sagemaker_notebook_instance_kms_key_configured.guard",
+      "guardFilePath": "__tests__/rules/aws/amazon_sagemaker/sagemaker_notebook_instance_kms_key_configured.guard",
       "controls": [
         "CIP-011-3-R1-Part 1.2"
       ]
     },
     {
-      "guardFilePath": "test/rules/aws/amazon_sns/sns_encrypted_kms.guard",
+      "guardFilePath": "__tests__/rules/aws/amazon_sns/sns_encrypted_kms.guard",
       "controls": [
         "CIP-011-3-R1-Part 1.2"
       ]
