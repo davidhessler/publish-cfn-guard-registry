@@ -1,8 +1,5 @@
 name: 'Public-CfnGuardRegistry'
-description: |
-  This action takes a user-provided local file location, processes the CloudFormation Guard rules in the path to combine
-  them into a CloudFormation Guard Rules Registry, and publishes them to a user-provided S3 bucket.  For information and 
-  example on building a CloudFormation Guard Rules Registry visit https://github.com/aws-cloudformation/aws-guard-rules-registry
+description: This action build a CloudFormation Guard Rules Registry and publishes them to a user-provided S3 bucket.
 author: 'davidhessler'
 inputs:
   MakeAggregateRule:
