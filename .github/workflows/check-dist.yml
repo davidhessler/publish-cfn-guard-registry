@@ -32,8 +32,6 @@ jobs:
       - name: Rebuild the dist/ directory
         run: |
           npm run build
-          ls -la lib
-          find "$PWD" | grep -v "node_modules" | grep -v "\.git" | grep -v "\.idea"    
           npm run package
 
       - name: Compare the expected and actual dist/ directories
