@@ -28,7 +28,7 @@ export class RuleSet {
     const ret: RuleSet[] = []
     const files = globSync(`${dir}/**/*.json`)
     for (const f of files) {
-      core.debug(`Aggregating file ${f}`)
+      core.notice(`Aggregating file ${f}`)
       const ruleSetJson = JSON.parse(fs.readFileSync(f, 'utf-8'))
       if (
         !!ruleSetJson.owner &&

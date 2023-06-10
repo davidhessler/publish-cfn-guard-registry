@@ -11,7 +11,7 @@ function castAsBoolean(value: string): boolean {
 async function run(): Promise<void> {
   try {
     // Get inputs from the action
-    core.debug('Entering Start')
+    core.notice('Entering Start')
     const makeAggregate: string = core.getInput('MakeAggregateRule')
     let makeAggregateCasted = false
 
@@ -28,7 +28,7 @@ async function run(): Promise<void> {
     const description: string = core.getInput('AggregateDescription')
     const markAsLatest: string = core.getInput('MarkAsLatest')
 
-    core.debug(
+    core.notice(
       JSON.stringify({
         name,
         contact,
@@ -54,7 +54,7 @@ async function run(): Promise<void> {
       failed = true
     } else {
       makeAggregateCasted = makeAggregate === 'true' || makeAggregate === 'True'
-      core.debug('MakeAggregate is valid')
+      core.notice('MakeAggregate is valid')
     }
 
     if (!validator.isValidBucketName(rulesRegistryBucket)) {
@@ -63,7 +63,7 @@ async function run(): Promise<void> {
       )
       failed = true
     } else {
-      core.debug('RuleRegistryBucket is valid')
+      core.notice('RuleRegistryBucket is valid')
     }
 
     if (!validator.isFolderValid(mappingsDirectory)) {
@@ -72,7 +72,7 @@ async function run(): Promise<void> {
       )
       failed = true
     } else {
-      core.debug('MappingsDirectory is valid')
+      core.notice('MappingsDirectory is valid')
     }
 
     if (makeAggregateCasted) {
@@ -82,7 +82,7 @@ async function run(): Promise<void> {
         )
         failed = true
       } else {
-        core.debug('RulesDirectory is valid')
+        core.notice('RulesDirectory is valid')
       }
 
       if (!validator.isValidEmail(ruleOwner)) {
@@ -91,7 +91,7 @@ async function run(): Promise<void> {
         )
         failed = true
       } else {
-        core.debug('RuleOwner is valid')
+        core.notice('RuleOwner is valid')
       }
 
       if (!validator.isValidVersion(version)) {
@@ -100,7 +100,7 @@ async function run(): Promise<void> {
         )
         failed = true
       } else {
-        core.debug('Version is valid')
+        core.notice('Version is valid')
       }
 
       if (!validator.isValidGenericInput(description)) {
@@ -109,7 +109,7 @@ async function run(): Promise<void> {
         )
         failed = true
       } else {
-        core.debug('Description is valid')
+        core.notice('Description is valid')
       }
 
       if (!validator.isValidBoolean(markAsLatest)) {
@@ -118,16 +118,16 @@ async function run(): Promise<void> {
         )
         failed = true
       } else {
-        core.debug('MarkAsLatest is valid')
+        core.notice('MarkAsLatest is valid')
       }
     } else {
-      core.debug('Do not aggregate')
+      core.notice('Do not aggregate')
     }
 
     // Persist defined rulesets
     const s3Client = new S3Client({})
     if (!failed) {
-      core.debug('Starting to push existing rule sets')
+      core.notice('Starting to push existing rule sets')
       const ruleSets = RuleSet.findRuleSets(mappingsDirectory)
       for (const ruleSet of ruleSets) {
         try {
@@ -141,12 +141,12 @@ async function run(): Promise<void> {
           failed = true
         }
       }
-      core.debug('Finished pushing existing rule sets')
+      core.notice('Finished pushing existing rule sets')
     }
 
     if (!failed && makeAggregateCasted) {
       // Aggregate and persist rules into one ruleset
-      core.debug('Starting to aggregating rules')
+      core.notice('Starting to aggregating rules')
       const agg = new CfnGuardAggregator({
         description,
         version,
@@ -154,9 +154,9 @@ async function run(): Promise<void> {
         contact,
         ruleOwner
       })
-      core.debug('Finished aggregating rules')
+      core.notice('Finished aggregating rules')
 
-      core.debug('Starting to push aggregate rule')
+      core.notice('Starting to push aggregate rule')
       const ruleSet = await agg.createAllRuleSet(rulesDirectory)
       try {
         await ruleSet.publishToS3(
@@ -167,7 +167,7 @@ async function run(): Promise<void> {
       } catch (error) {
         core.setFailed(`Action Failed, reason: ${error}`)
       }
-      core.debug('Finished pushing aggregate rule')
+      core.notice('Finished pushing aggregate rule')
     }
     // Set outputs of the action
   } catch (error) {
