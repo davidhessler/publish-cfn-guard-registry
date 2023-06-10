@@ -109,22 +109,40 @@ const semver = __importStar(__nccwpck_require__(11383));
 const fs_1 = __importDefault(__nccwpck_require__(57147));
 class InputValidator {
     constructor() {
-        this.genericValidString = new RegExp('(\\w|\\s|[-.!@#$%^&*()])+');
+        this.genericValidString = new RegExp('[\\w\\s\\-\\.!@#$%^&*()\\—]+');
         this.s3BucketValidString = new RegExp('(?!(^xn--|.+-s3alias$|.+--ol-s3$))^[a-z0-9][a-z0-9-.]{1,61}[a-z0-9]$');
-        this.emailValidString = new RegExp('^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$');
+        this.emailValidString = new RegExp('^[\\w\\-\\+\\.]+@[\\w\\-\\.]+\\w+$');
         this.linuxValidString = new RegExp('^\\/*.\\w+.(\\/[\\w-]+)*$');
     }
     isValidBucketName(input) {
-        return this.s3BucketValidString.test(input);
+        const ret = this.s3BucketValidString.exec(input);
+        if (ret) {
+            return ret[0] === input;
+        }
+        else {
+            return false;
+        }
     }
     isValidGenericInput(input) {
-        return this.genericValidString.test(input);
+        const ret = this.genericValidString.exec(input);
+        if (ret) {
+            return ret[0] === input;
+        }
+        else {
+            return false;
+        }
     }
     isValidVersion(input) {
         return semver.valid(input) !== null;
     }
     isValidEmail(input) {
-        return this.emailValidString.test(input);
+        const ret = this.emailValidString.exec(input);
+        if (ret) {
+            return ret[0] === input;
+        }
+        else {
+            return false;
+        }
     }
     isValidBoolean(input) {
         switch (input) {
@@ -138,7 +156,8 @@ class InputValidator {
         }
     }
     isFolderValid(input) {
-        return this.linuxValidString.test(input) && fs_1.default.existsSync(input);
+        return (input === '.' ||
+            (this.linuxValidString.test(input) && fs_1.default.existsSync(input)));
     }
 }
 exports.InputValidator = InputValidator;
@@ -308,7 +327,7 @@ async function run() {
             core.debug('Starting to push aggregate rule');
             const ruleSet = await agg.createAllRuleSet(rulesDirectory);
             try {
-                ruleSet.publishToS3(rulesRegistryBucket, castAsBoolean(markAsLatest), s3Client);
+                await ruleSet.publishToS3(rulesRegistryBucket, castAsBoolean(markAsLatest), s3Client);
             }
             catch (error) {
                 core.setFailed(`Action Failed, reason: ${error}`);
@@ -442,6 +461,7 @@ class RuleSet {
             })));
         }
         await Promise.all(promises);
+        core.setOutput('Published Files', promises.length / 2);
         core.notice(`Successfully pushed ${this.ruleSetName} to ${bucketName}`);
     }
 }
