@@ -1,0 +1,62 @@
+###
+# EC2_INSTANCE_PROFILE_ATTACHED tests
+###
+---
+- name: Empty, SKIP
+  input: {}
+  expectations:
+    rules:
+      EC2_INSTANCE_PROFILE_ATTACHED: SKIP
+
+- name: No resources, SKIP
+  input:
+    Resources: {}
+  expectations:
+    rules:
+      EC2_INSTANCE_PROFILE_ATTACHED: SKIP
+
+- name: EC2 Instance has an IAM Instance Profile associated with it, PASS
+  input:
+    Resources:
+      ExampleEC2:
+        Type: AWS::EC2::Instance
+        Properties:
+          ImageId: !Ref LatestAmiId
+          InstanceType: !Ref pInstanceType
+          Monitoring: true
+          IamInstanceProfile: !Ref rInstanceProfile
+  expectations:
+    rules:
+      EC2_INSTANCE_PROFILE_ATTACHED: PASS
+
+- name: EC2 has no IAM Instance Profile associated with it, FAIL
+  input:
+    Resources:
+      ExampleEC2:
+        Type: AWS::EC2::Instance
+        Properties:
+          ImageId: !Ref LatestAmiId
+          InstanceType: !Ref pInstanceType
+          Monitoring: true
+  expectations:
+    rules:
+      EC2_INSTANCE_PROFILE_ATTACHED: FAIL
+
+- name: EC2 has no IAM Instance Profile associated with it but rule suppressed, SKIP
+  input:
+    Resources:
+      ExampleEC2:
+        Type: AWS::EC2::Instance
+        Metadata:
+          guard:
+            SuppressedRules:
+            - EC2_INSTANCE_PROFILE_ATTACHED
+        Properties:
+          ImageId: !Ref LatestAmiId
+          InstanceType: !Ref pInstanceType
+          Monitoring: true
+  expectations:
+    rules:
+      EC2_INSTANCE_PROFILE_ATTACHED: SKIP
+
+

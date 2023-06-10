@@ -1,11 +1,46 @@
-name: 'Your name here'
-description: 'Provide a description here'
-author: 'Your name or organization here'
+name: 'Public-CfnGuardRegistry'
+description: 'This action takes a user-provided local file location, processes the CloudFormation Guard rules in the path to combine them into one rule, and publishes them to a user-provided S3 bucket.'
+author: 'davidhessler'
 inputs:
-  milliseconds: # change this
+  MakeAggregateRule:
+    description: 'Enable automatic aggregation rule'
+    required: false
+    default: false
+  AggregateName:
+    description: 'The name of aggregate rule set'
+    required: false
+    default: ''
+  AggregateOwner:
+    description: 'The name of the owner of the aggregate rule set'
+    required: false
+    default: ''
+  AggregateContact:
+    description: 'The email of the owner of the aggregate rule set'
+    required: false
+    default: ''
+  AggregateVersion:
+    description: 'The Version of the aggregate rule set.  This must be in semver format'
+    required: false
+    default: ''
+  Aggregatedescription:
+    description: 'description of the aggregate rule set'
+    required: false
+    default: ''
+  MarkAsLatest:
+    description: 'Automatically marks the deployment of all rule set as latest'
+    required: false
+    default: false
+  MappingsDirectory:
+    description: 'The directory where CloudFormation Guard Rule Registry mappings are located.'
+    required: false
+    default: 'mappings'
+  RulesDirectory:
+    description: 'The directory where CloudFormation Guard rules are located.  This is used if you want the action to aggregate rules.'
+    required: false
+    default: rules
+  RuleRegistryBucket:
+    description: 'The Amazon S3 Bucket where the CloudFormation Guard Registry rules are stored'
     required: true
-    description: 'input description here'
-    default: 'default value if applicable'
 runs:
   using: 'node16'
   main: 'dist/index.js'

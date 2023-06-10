@@ -21,4 +21,6 @@ jobs:
       - uses: actions/checkout@v3
       - uses: ./
         with:
-          milliseconds: 1000
+          MakeAggregateRule: false
+          MarkAsLatest: false
+          RuleRegistryBucket: cfn-guard-registry-819163596280
