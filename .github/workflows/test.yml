@@ -4,10 +4,6 @@ on: # rebuild any PRs and main branch changes
     branches:
       - main
   pull_request:
-    types:
-      - opened
-      - reopened
-      - edited
     branches:
       - main
     paths-ignore:
@@ -41,6 +37,6 @@ jobs:
           aws-region: ${{ env.AWS_REGION }}
       - uses: ./
         with:
-          MakeAggregateRule: false
+          MappingsDirectory: __tests__/mappings
           MarkAsLatest: false
           RuleRegistryBucket: cfn-guard-registry-819163596280
